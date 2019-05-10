@@ -17,8 +17,8 @@ steps:
 
 - script: |
     npm install
-    nyc --reporter=cobertura --reporter=html 
-    ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml
+    npm run nyc --reporter=cobertura --reporter=html 
+    npm run ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml
   displayName: 'npm install and build'
 
 - task: PublishTestResults@2
